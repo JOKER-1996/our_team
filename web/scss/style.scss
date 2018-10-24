@@ -1,0 +1,237 @@
+@import 'mixins';
+@import 'variable';
+@import 'font';
+
+
+.head__container {
+	width: $w90;
+	text-align: $tac;
+	@include mgA;
+	@include height(140px);
+	
+	.head__h2 {
+		@include fs(18px);
+		@include lH(24px);
+		color: $mediumGray;
+		text-align: $tac;
+		font-family: 'Raleway Medium';
+		padding: 10px 0 5px 0;
+	}
+
+	.head__h1 {
+		color: $gold;
+		@include fs(60px);
+		font-family: 'Roboto Black';
+		padding-bottom: 5px;
+	}
+}
+
+.bonfire {
+	@include fs(24px);
+	@include lH(24px);
+	color: $gold;
+	text-align: $tac;
+	margin-top: -12px;
+}
+
+.head__left--line {
+	@include w(17%);
+	@include height(1px);
+	@include bgCol($gold);
+	margin: 10px 0 0 31%;
+}
+
+.head__right--line {
+	@include w(17%);
+	@include height(1px);
+	@include bgCol($gold);
+	margin: -17px 0 0 52%;
+}
+
+.main__container {
+	width: $w90;
+	background-color: $bgcolor;
+	@include height(430px);
+	@include mgA;
+	
+	.main__left {
+		@include w(50%);
+		@include bgCol(#fff);
+		@include height(430px);
+		float: left;
+		box-sizing: border-box;
+		border-right: 1px solid $gold;
+	}
+
+	.main__right {
+		@include w(50%);
+		@include bgCol(#fff);
+		@include height(430px);
+		float: right;
+	}
+}
+
+.left__arrow {
+	@include fs(40px);
+	@include lH(24px);
+	color: $gold;
+	margin: -150px 0 0 -5%;
+	 
+	&:hover {
+		color: $lightGray;
+	}
+}
+
+.right__arrow {
+	@include fs(40px);
+	@include lH(24px);
+	color: $gold;
+	margin: -165px 0 0 100%;
+	 
+	&:hover {
+		color: $lightGray;
+	}
+}
+
+
+.border__inside {
+	width: 45.7%;
+	height: 281px;
+	box-sizing: border-box;
+	position: relative;
+	margin: 80px 0 0 25%;
+	background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: #ffcc00; stroke-width: 1; stroke-dasharray: 200 81; stroke-dashoffset: 100'/></svg>");
+
+	& img {
+		width: 89%;
+		height: 250px;
+		box-sizing: border-box;
+		border: 1px double $gold;
+		margin: 15px 0 0 15px;
+		
+		&:hover {
+			cursor: pointer;
+			border: none;
+			transform: scale(1.11);
+		}
+	}
+}
+
+
+.right__h1, .right__h2, .right__p, .right__a {
+	text-align: $tac;
+}
+
+.right__h1 {
+	@include fs(36px);
+	font-family: 'Roboto Black';
+	color: $gray;
+	@include lH(24px);
+	padding: 50px 0 20px 0;
+}
+
+.right__line {
+	@include w(100px);
+	@include height(1px);
+	@include bgCol($gold);
+	margin-left: 42%;
+}
+
+.right__h2 {
+	@include fs(24px);
+	font-family: 'Raleway Regular';
+	color: $gray;
+	@include lH(36px);
+	padding: 20px 0 20px 0;
+}
+
+.social__icon {
+	margin: 0 5px 10px 39%;
+
+	&--li {
+		display: inline;
+	}
+
+	&--a {
+		text-decoration: none;
+		
+		& svg {
+			@include w(30px);
+			@include height(30px);
+		}
+	}
+}
+
+svg path {
+	&:hover {
+		fill: #000;
+	}
+}
+
+.right__p {
+	@include fs(14px);
+	font-family: 'Raleway Medium';
+	color: $darkGray;
+	@include lH(24px);
+}
+
+.right__line1 {
+	@include w(50px);
+	@include height(4px);
+	margin: 15px 0 30px 46%;
+}
+
+.right__a {
+	border: 1px solid $gold;
+	font-family: 'OpenSans Bold';
+	@include fs(14px);
+	color: $gray;
+	text-decoration: none;
+	padding: 6px 11px;
+	margin: 20px 0 0 40.25%;
+	
+	&:hover {
+		box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+		color: $gold;
+		border: none;
+	}
+}
+
+.foot__container {
+	@include mgA;
+	width: $w90;
+	@include height(40px);
+	
+	.foot__list {
+		@include w(100px);
+		@include mgA;
+		@include height(20px);
+		padding-top: 20px;
+		margin-left: 47.15%;
+		
+		&--li {
+			display: inline-block;
+			@include w(20px);
+			@include height(20px);
+			border-radius: 50%;
+			@include bgCol($gold);
+			
+			&:first-child {
+				@include w(20px);
+				@include height(20px);
+				border: 2px solid $gold;
+				@include bgCol(#fff);
+				box-sizing: border-box;
+			}
+			
+			&:hover {
+				@include w(20px);
+				@include height(20px);
+				border: 2px solid $gold;
+				@include bgCol(#fff);
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+		}
+	}
+}
